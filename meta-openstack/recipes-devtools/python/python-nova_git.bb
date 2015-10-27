@@ -266,6 +266,7 @@ FILES_${SRCNAME}-api = " \
 "
 
 DEPENDS += " \
+        libvirt \
         python-pip \
         python-pbr \
         "
@@ -320,6 +321,7 @@ RDEPENDS_${PN} = " libvirt \
 		   python-posix-ipc \
 		   python-rfc3986 \
 		   python-oslo.i18n \
+		   python-psutil \
     "
 
 RDEPENDS_${SRCNAME}-common = "${PN} openssl openssl-misc libxml2 libxslt \

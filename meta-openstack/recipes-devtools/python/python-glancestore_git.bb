@@ -22,11 +22,13 @@ DEPENDS += " \
         "
 
 RDEPENDS_${PN} = " \
+   python-enum34 \
    python-eventlet \
    python-iso8601 \
    python-six \
    python-cinderclient \
    python-oslo.config \
    python-oslo.i18n \
+   python-oslo.vmware \
    "
 
