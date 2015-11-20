@@ -12,7 +12,6 @@ SRC_URI = "http://erlang.org/download/otp_src_${UPSTREAM_VERSION}.tar.gz \
     file://erlang-fix-build-issue-in-Yocto.patch \
 "
 SRC_URI += "file://fix-wx-configure.patch"
-SRC_URI += "file://erlang-fix-build-issue-in-Yocto.patch"
 
 S = "${WORKDIR}/otp_src_${UPSTREAM_VERSION}"
 
