@@ -158,10 +158,7 @@ index 0000000000000000000000000000000000000000..9780886bc8f9d400aab2e96a33b14af9
 +        self.descriptions = descriptions
 +
 +    def getDescription(self, test):
-+        if self.descriptions:
-+            return test.shortDescription() or str(test)
-+        else:
-+            return str(test)
++        return str(test)
 +
 +    def startTest(self, test):
 +        TestResult.startTest(self, test)
