@@ -27,8 +27,8 @@ SRC_URI = "https://files.pythonhosted.org/packages/source/s/${PN}/${PN}-${PV}.ta
            file://roster \
 "
 
-SRC_URI[md5sum] = "955d57b39cac5762f33e2e7ca7ea39de"
-SRC_URI[sha256sum] = "aaf45f8dcf95a20b56072e620100432d058ab297210c4902dc90e197b236b064"
+SRC_URI[md5sum] = "94f54d163289d7ea7ba9d493787e40c3"
+SRC_URI[sha256sum] = "fe868415d0e1162157186f4c5263e9af902b0571870ad2da210e7edf5ff5331d"
 
 S = "${WORKDIR}/${PN}-${PV}"
 
