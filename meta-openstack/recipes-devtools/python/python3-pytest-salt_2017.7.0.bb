@@ -13,11 +13,11 @@ SRC_URI[sha256sum] = "7052459cda9fbdbbfff9a25b24243b0b96cf56835a2c41135d754cc5b6
 SRCREV = "feb5031f80cf84b113ebe69543cdd44b6a373d21"
 S = "${WORKDIR}/git"
 
-inherit setuptools
+inherit setuptools3
 
 RDEPENDS_${PN} = " \
-    python-pytest \
-    python-pytest-tempdir \
-    python-pytest-helpers-namespace \
-    python-psutil \
+    python3-pytest \
+    python3-pytest-tempdir \
+    python3-pytest-helpers-namespace \
+    python3-psutil \
     "
