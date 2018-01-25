@@ -16,9 +16,7 @@ SRC_URI[sha256sum] = "0ef4be6a8a9b505ae1c328394dfad50493674af6100c7e2c220f374533
 S = "${WORKDIR}/${SRCNAME}-${PV}"
 
 RDEPENDS_${PN} = "\
-                  python-mock \
-                  python-unittest \
+                  python3-unittest \
 "
 
-inherit setuptools
-
+inherit setuptools3
