@@ -10,8 +10,8 @@ FILESEXTRAPATHS_append := "${THISDIR}/${PN}"
 SRC_URI = "https://github.com/saltstack/salt-testing/archive/v${PV}.tar.gz;downloadfilename=salt-testing-v${PV}.tar.gz \
            file://0001-Add-ptest-output-option-to-test-suite.patch \
            "
-SRC_URI[md5sum] = "8ca55a796e9ad7ba72bc143043753ccf"
-SRC_URI[sha256sum] = "0ef4be6a8a9b505ae1c328394dfad50493674af6100c7e2c220f374533d86edc"
+SRC_URI[md5sum] = "35a8332736430624ef8f8a78d97ecb03"
+SRC_URI[sha256sum] = "5a45c5540f9ee250f1a3d2d9b70eb015fad9bd51a1bd1a04dc56cc55a5298617"
 
 S = "${WORKDIR}/${SRCNAME}-${PV}"
 
