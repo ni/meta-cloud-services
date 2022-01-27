@@ -5,7 +5,7 @@ LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=1dece7821bf3fd70fe1309eaa37d52a2"
 
 SRC_URI = "\
-	git://github.com/openstack/os-brick.git;branch=stable/pike \
+	git://github.com/openstack/os-brick.git;branch=stable/pike;protocol=https \
 	"
 
 PV = "1.15.5+git${SRCPV}"

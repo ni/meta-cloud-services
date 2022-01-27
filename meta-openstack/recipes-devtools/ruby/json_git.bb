@@ -16,7 +16,7 @@ SRCREV = "db4c71a7701b95c30f945ee1536240920dcfdc17"
 S = "${WORKDIR}/git"
 
 SRC_URI = " \
-    git://github.com/flori/json.git \
+    git://github.com/flori/json.git;protocol=https \
     "
 
 inherit ruby

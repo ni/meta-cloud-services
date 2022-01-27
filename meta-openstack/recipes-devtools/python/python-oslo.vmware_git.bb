@@ -8,7 +8,7 @@ PV = "2.23.0+git${SRCPV}"
 SRCREV = "95a30dfa24d259fe16f0fd43eb1b67b9f3fc0397"
 
 SRCNAME = "oslo.vmware"
-SRC_URI = "git://github.com/openstack/${SRCNAME}.git;branch=stable/pike"
+SRC_URI = "git://github.com/openstack/${SRCNAME}.git;branch=stable/pike;protocol=https"
 
 S = "${WORKDIR}/git"
 

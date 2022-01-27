@@ -9,7 +9,7 @@ SRCNAME = "fasteners"
 PV = "0.13.0+git${SRCPV}"
 SRCREV = "c055890c98f67c343ff445973cd4efee67f081ce"
 
-SRC_URI = "git://github.com/harlowja/${SRCNAME}.git"
+SRC_URI = "git://github.com/harlowja/${SRCNAME}.git;protocol=https"
 
 S = "${WORKDIR}/git"
 

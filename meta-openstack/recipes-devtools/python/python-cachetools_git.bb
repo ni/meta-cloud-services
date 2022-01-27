@@ -9,7 +9,7 @@ SRCNAME = "cachetools"
 PV = "1.1.5+git${SRCPV}"
 SRCREV = "42853733d0caf68ef5bf5933a377572b05437e2c"
 
-SRC_URI = "git://github.com/tkem/${SRCNAME}.git"
+SRC_URI = "git://github.com/tkem/${SRCNAME}.git;protocol=https"
 
 S = "${WORKDIR}/git"
 

@@ -8,7 +8,7 @@ PV = "3.0.3+git${SRCPV}"
 SRCREV = "6532a7449d8102c172ea5011f1552fcc163c09f1"
 
 SRCNAME = "futures"
-SRC_URI = "git://github.com/agronholm/python${SRCNAME}.git"
+SRC_URI = "git://github.com/agronholm/python${SRCNAME}.git;protocol=https"
 
 S = "${WORKDIR}/git"
 

@@ -9,7 +9,7 @@ SRCNAME = "django-babel"
 PV = "0.5.1+git${SRCPV}"
 SRCREV = "88b389381c0e269605311ae07029555b65a86bc5"
 
-SRC_URI = "git://github.com/python-babel/${SRCNAME}.git \
+SRC_URI = "git://github.com/python-babel/${SRCNAME}.git;protocol=https \
           "
 
 S = "${WORKDIR}/git"

@@ -7,7 +7,7 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=4a4d0e932ffae1c0131528d30d419c55"
 SRCNAME = "keystoneclient"
 
 SRC_URI = "\
-	git://github.com/openstack/python-keystoneclient.git;branch=stable/pike \
+	git://github.com/openstack/python-keystoneclient.git;branch=stable/pike;protocol=https \
 	file://keystone-api-check.sh \
 	"
 

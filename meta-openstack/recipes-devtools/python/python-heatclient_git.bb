@@ -26,7 +26,7 @@ RDEPENDS_${PN} +="python-cliff \
 PR = "r0"
 SRCNAME = "heatclient"
 
-SRC_URI = "git://github.com/openstack/python-heatclient.git;branch=master"
+SRC_URI = "git://github.com/openstack/python-heatclient.git;branch=master;protocol=https"
 
 PV = "1.14.0+git${SRCPV}"
 SRCREV = "2ce6aa19a3a8936bc7c9737efadacbb4ae737dab"

@@ -9,7 +9,7 @@ PV = "1.25.1+git${SRCPV}"
 SRCREV = "cb9ab34cd40a7cd9eff0e40ccc2df4ee88edae4e"
 
 SRCNAME = "oslo.policy"
-SRC_URI = "git://github.com/openstack/${SRCNAME}.git;branch=stable/pike"
+SRC_URI = "git://github.com/openstack/${SRCNAME}.git;branch=stable/pike;protocol=https"
 
 S = "${WORKDIR}/git"
 

@@ -23,7 +23,7 @@ RDEPENDS_${PN} +=" \
 	"
 
 SRCNAME = "mistralclient"
-SRC_URI = "git://github.com/openstack/${BPN}.git;branch=master"
+SRC_URI = "git://github.com/openstack/${BPN}.git;branch=master;protocol=https"
 
 PV = "1.1.0+git${SRCPV}"
 SRCREV = "48e2780ee0148efc186c8972ca22e572fa2433c5"

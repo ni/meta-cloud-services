@@ -7,7 +7,7 @@ DEPENDS = "sg3-utils"
 SRCREV = "cb7971cfeecaa43c15eed4719dc82516d7e87b6c"
 PV = "1.0.67+git${SRCPV}"
 
-SRC_URI = "git://github.com/fujita/tgt.git \
+SRC_URI = "git://github.com/fujita/tgt.git;protocol=https \
 	file://0001-Correct-the-path-of-header-files-check-in-Yocto-buil.patch \
         file://0001-usr-Makefile-WARNING-fix.patch \
         file://usr-Makefile-apply-LDFLAGS-to-all-executables.patch \

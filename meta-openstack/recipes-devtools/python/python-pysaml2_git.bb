@@ -8,7 +8,7 @@ PV = "3.0.2+git${SRCPV}"
 SRCREV = "248c629aa570b16fdc79c5a5eb2b3c4c0ee52916"
 
 SRCNAME = "pysaml2"
-SRC_URI = "git://github.com/rohe/${SRCNAME}.git"
+SRC_URI = "git://github.com/rohe/${SRCNAME}.git;protocol=https"
 
 S = "${WORKDIR}/git"
 

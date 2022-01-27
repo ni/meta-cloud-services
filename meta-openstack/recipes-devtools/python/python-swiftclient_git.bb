@@ -7,7 +7,7 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=34400b68072d710fecd0a2940a0d1658"
 PR = "r0"
 SRCNAME = "swiftclient"
 
-SRC_URI = "git://github.com/openstack/python-swiftclient.git;branch=master"
+SRC_URI = "git://github.com/openstack/python-swiftclient.git;branch=master;protocol=https"
 
 PV = "3.5.0+git${SRCPV}"
 SRCREV = "b91651eba09ed43903c55f24e3a1a52aefeea75f"

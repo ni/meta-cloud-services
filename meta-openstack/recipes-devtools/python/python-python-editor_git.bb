@@ -8,7 +8,7 @@ PV = "0.4+git${SRCPV}"
 SRCREV = "d6fa2a6bb3106a1ba00fe40f9af62e4ddc539e1e"
 
 SRCNAME = "python-editor"
-SRC_URI = "git://github.com/fmoo/${SRCNAME}.git"
+SRC_URI = "git://github.com/fmoo/${SRCNAME}.git;protocol=https"
 
 S = "${WORKDIR}/git"
 

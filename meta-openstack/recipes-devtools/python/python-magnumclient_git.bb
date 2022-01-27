@@ -30,7 +30,7 @@ RDEPENDS_${PN} +=" \
 	"
 
 SRCNAME = "magnumclient"
-SRC_URI = "git://github.com/openstack/${BPN}.git;branch=master"
+SRC_URI = "git://github.com/openstack/${BPN}.git;branch=master;protocol=https"
 
 PV = "1.0.0.0b1+git${SRCPV}"
 SRCREV = "fb1ff6777eb96a5b7ba38156bf8354cda9b88ad4"

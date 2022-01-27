@@ -9,7 +9,7 @@ SRCNAME = "django_openstack_auth"
 PV = "3.5.0+git${SRCPV}"
 SRCREV = "9e108ed426a5a1e5c9dd394b197c27d046754d0c"
 
-SRC_URI = "git://github.com/openstack/${SRCNAME}.git;branch=stable/pike \
+SRC_URI = "git://github.com/openstack/${SRCNAME}.git;branch=stable/pike;protocol=https \
 "
 
 S = "${WORKDIR}/git"
