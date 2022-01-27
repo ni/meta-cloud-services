@@ -17,7 +17,7 @@ SRCREV = "d8a0b8d5c879b0810b43eaab241fb87b68c93453"
 S = "${WORKDIR}/git"
 
 SRC_URI = " \
-    git://github.com/brianmario/yajl-ruby.git \
+    git://github.com/brianmario/yajl-ruby.git;protocol=https \
     file://0001-Don-t-compile-extensions.patch \
     "
 

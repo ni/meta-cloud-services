@@ -28,7 +28,7 @@ RDEPENDS_${PN} +=" \
 	"
 	
 SRCNAME = "zaqarclient"
-SRC_URI = "git://github.com/openstack/${BPN}.git;branch=stable/pike"
+SRC_URI = "git://github.com/openstack/${BPN}.git;branch=stable/pike;protocol=https"
 
 PV = "0.7.0+git${SRCPV}"
 SRCREV = "a1c2de74c56c6ddb11dc6aec78e8c438629ca8e8"

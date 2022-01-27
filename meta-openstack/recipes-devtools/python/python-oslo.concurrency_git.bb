@@ -8,7 +8,7 @@ PV = "3.21.1+git${SRCPV}"
 SRCREV = "8adf9b1f0d69dca7372b967ef4f894487f1a9d64"
 
 SRCNAME = "oslo.concurrency"
-SRC_URI = "git://github.com/openstack/${SRCNAME}.git;branch=stable/pike"
+SRC_URI = "git://github.com/openstack/${SRCNAME}.git;branch=stable/pike;protocol=https"
 
 S = "${WORKDIR}/git"
 

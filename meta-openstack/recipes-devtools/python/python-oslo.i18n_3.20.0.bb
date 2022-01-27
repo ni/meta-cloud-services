@@ -7,7 +7,7 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=34400b68072d710fecd0a2940a0d1658"
 SRCREV = "172e20b10981069c36b0f42377e5b4fbe22a9864"
 
 SRCNAME = "oslo.i18n"
-SRC_URI = "git://github.com/openstack/${SRCNAME}.git;branch=master"
+SRC_URI = "git://github.com/openstack/${SRCNAME}.git;branch=master;protocol=https"
 
 S = "${WORKDIR}/git"
 

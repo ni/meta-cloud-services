@@ -8,7 +8,7 @@ PV = "0.4"
 SRCREV = "93b3d3ba63597e57b20333db4e33ca0f48debf2a"
 
 SRCNAME = "monotonic"
-SRC_URI = "git://github.com/atdt/${SRCNAME}.git"
+SRC_URI = "git://github.com/atdt/${SRCNAME}.git;protocol=https"
 
 S = "${WORKDIR}/git"
 

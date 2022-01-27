@@ -10,7 +10,7 @@ PV = "1.8.6"
 SRCREV = "80b7e9d09f2d23209b591288f9b2cf3eb3d927c8"
 
 SRC_URI = " \
-    git://github.com/django/django.git;branch=stable/1.8.x \
+    git://github.com/django/django.git;branch=stable/1.8.x;protocol=https \
     "
 
 S = "${WORKDIR}/git"

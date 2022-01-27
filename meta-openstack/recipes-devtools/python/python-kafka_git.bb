@@ -9,7 +9,7 @@ SRCREV = "4955582be1443b75c23f700268b7abbef0fde0ad"
 SRCNAME = "kafka-python"
 
 LIC_FILES_CHKSUM = "file://LICENSE;md5=22efebb1e053dcc946f4b9d17f3cbbea"
-SRC_URI = "git://github.com/mumrah/${SRCNAME}.git"
+SRC_URI = "git://github.com/mumrah/${SRCNAME}.git;protocol=https"
 
 S = "${WORKDIR}/git"
 

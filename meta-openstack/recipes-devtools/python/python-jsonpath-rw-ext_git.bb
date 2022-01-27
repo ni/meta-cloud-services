@@ -9,7 +9,7 @@ SRCREV = "0a2d032f9743f5c9dd0f29be20a22b3f3388a93d"
 SRCNAME = "jsonpath-rw-ext"
 
 LIC_FILES_CHKSUM = "file://LICENSE;md5=1dece7821bf3fd70fe1309eaa37d52a2"
-SRC_URI = "git://github.com/sileht/${BPN}.git"
+SRC_URI = "git://github.com/sileht/${BPN}.git;protocol=https"
 
 S = "${WORKDIR}/git"
 

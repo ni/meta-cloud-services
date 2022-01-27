@@ -11,7 +11,7 @@ LIC_FILES_CHKSUM = "file://PSF.LICENSE;md5=7dd786e8594f1e787da94a946557b40e"
 PV = "1.57+git${SRCPV}"
 SRCREV = "664bd3e23fe500fbde4c70636e2d24c8fd2f35af"
 
-SRC_URI = "git://github.com/linsomniac/${BPN}.git"
+SRC_URI = "git://github.com/linsomniac/${BPN}.git;protocol=https"
 
 S = "${WORKDIR}/git"
 

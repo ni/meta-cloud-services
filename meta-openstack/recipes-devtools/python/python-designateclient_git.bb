@@ -28,7 +28,7 @@ RDEPENDS_${PN} += " \
         "
 
 SRCNAME = "designateclient"
-SRC_URI = "git://github.com/openstack/${BPN}.git;branch=stable/pike"
+SRC_URI = "git://github.com/openstack/${BPN}.git;branch=stable/pike;protocol=https"
 
 PV = "2.7.0+git${SRCPV}"
 SRCREV = "77a705857f2c303a03fdbccd4460a68b61d92fd0"

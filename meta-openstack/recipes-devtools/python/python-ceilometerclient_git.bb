@@ -28,7 +28,7 @@ RDEPENDS_${PN} += " \
         "
 
 SRC_URI = "\
-	git://github.com/openstack/python-ceilometerclient.git;branch=stable/pike \
+	git://github.com/openstack/python-ceilometerclient.git;branch=stable/pike;protocol=https \
 	"
 
 PV = "2.9.0+git${SRCPV}"

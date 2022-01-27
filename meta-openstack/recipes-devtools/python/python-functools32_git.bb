@@ -9,7 +9,7 @@ SRCREV = "ad90fa86e2f4f494a3aedb0571274f3bbc6d7ab5"
 SRCNAME = "functools32"
 
 LIC_FILES_CHKSUM = "file://LICENSE;md5=27cf2345969ed18e6730e90fb0063a10"
-SRC_URI = "git://github.com/MiCHiLU/python-${SRCNAME}.git"
+SRC_URI = "git://github.com/MiCHiLU/python-${SRCNAME}.git;protocol=https"
 
 S = "${WORKDIR}/git"
 

@@ -8,7 +8,7 @@ PV = "2.4.1+git${SRCPV}"
 SRCREV = "2dcef8079cf09f427eeb0be62374f6c1a52bf59d"
 
 SRCNAME = "Routes"
-SRC_URI = "git://github.com/bbangert/routes.git"
+SRC_URI = "git://github.com/bbangert/routes.git;protocol=https"
 
 S = "${WORKDIR}/git"
 

@@ -8,7 +8,7 @@ PV = "1.4.0"
 SRCREV = "57f2bc44a8bca99bac6c57496c8b3fdea26f94d5"
 
 SRCNAME = "appdirs"
-SRC_URI = "git://github.com/ActiveState/${SRCNAME}.git"
+SRC_URI = "git://github.com/ActiveState/${SRCNAME}.git;protocol=https"
 
 S = "${WORKDIR}/git"
 

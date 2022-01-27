@@ -31,7 +31,7 @@ RDEPENDS_${PN} +=" \
 	"
 
 SRCNAME = "manilaclient"
-SRC_URI = "git://github.com/openstack/${BPN}.git;branch=master"
+SRC_URI = "git://github.com/openstack/${BPN}.git;branch=master;protocol=https"
 
 PV = "1.4.0+git${SRCPV}"
 SRCREV = "0bbd2144f701df3408b1435b16611c2ba3c22221"

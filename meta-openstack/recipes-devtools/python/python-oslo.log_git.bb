@@ -5,7 +5,7 @@ LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=34400b68072d710fecd0a2940a0d1658"
 
 SRCNAME = "oslo.log"
-SRC_URI = "git://github.com/openstack/${SRCNAME}.git;branch=stable/pike"
+SRC_URI = "git://github.com/openstack/${SRCNAME}.git;branch=stable/pike;protocol=https"
 
 PV = "3.30.0+git${SRCPV}"
 SRCREV = "ad776e84b51223b85b7dfa85a7e77bb2f3848f4b"

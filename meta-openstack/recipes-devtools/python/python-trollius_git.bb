@@ -8,7 +8,7 @@ PV = "2.0+git${SRCPV}"
 SRCREV = "5e9854d7b7bed6eb6e182808379342355e2bfca4"
 
 SRCNAME = "trollius"
-SRC_URI = "git://github.com/haypo/${SRCNAME}.git;branch=trollius"
+SRC_URI = "git://github.com/haypo/${SRCNAME}.git;branch=trollius;protocol=https"
 
 S = "${WORKDIR}/git"
 

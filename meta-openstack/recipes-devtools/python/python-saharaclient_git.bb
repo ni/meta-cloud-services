@@ -20,7 +20,7 @@ RDEPENDS_${PN} += " \
 
 SRCNAME = "saharaclient"
 
-SRC_URI = "git://github.com/openstack/python-saharaclient.git;branch=master"
+SRC_URI = "git://github.com/openstack/python-saharaclient.git;branch=master;protocol=https"
 
 PV = "0.8.0+git${SRCPV}"
 SRCREV = "319ceb6acf55382218dcd971367613aecb3e4afc"

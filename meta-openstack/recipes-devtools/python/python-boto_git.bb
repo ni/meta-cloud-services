@@ -9,7 +9,7 @@ PV = "2.8.0+git${SRCPV}"
 PR = "r0"
 SRCNAME = "boto"
 
-SRC_URI = "git://github.com/boto/boto.git;protocol=git"
+SRC_URI = "git://github.com/boto/boto.git;protocol=https"
 
 SRC_URI[md5sum] = "5528f3010c42dd0ed7b188a6917295f1"
 SRC_URI[sha256sum] = "4d6d38aa8e9e536a27a9737eb4222f896417841fed9a12eedcb619ba8fb68a39"

@@ -8,7 +8,7 @@ PV = "1.10.5"
 SRCREV = "42af0563bf88e84d215dea9ea6f989cb867e930e"
 
 SRCNAME = "wrapt"
-SRC_URI = "git://github.com/GrahamDumpleton/${SRCNAME}.git"
+SRC_URI = "git://github.com/GrahamDumpleton/${SRCNAME}.git;protocol=https"
 
 S = "${WORKDIR}/git"
 

@@ -8,7 +8,7 @@ PV = "1.1.0+git${SRCPV}"
 SRCREV = "c5dc0d9577e455f149edb5331a6e493def6928d5"
 
 SRCNAME = "pycadf"
-SRC_URI = "git://github.com/openstack/${SRCNAME}.git"
+SRC_URI = "git://github.com/openstack/${SRCNAME}.git;protocol=https"
 
 S = "${WORKDIR}/git"
 

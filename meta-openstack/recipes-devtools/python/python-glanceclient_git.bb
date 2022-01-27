@@ -13,7 +13,7 @@ SRCREV = "13b25ff1fed908cfe7b4e719a97efd7121e3be96"
 PV = "2.8.0+git${SRCPV}"
 
 SRC_URI = "\
-	git://github.com/openstack/${BPN}.git;branch=stable/pike \
+	git://github.com/openstack/${BPN}.git;branch=stable/pike;protocol=https \
 	file://glance-api-check.sh \
 	"
 
