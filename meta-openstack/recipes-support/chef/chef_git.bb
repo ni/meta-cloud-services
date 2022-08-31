@@ -11,14 +11,14 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=8f7bb094c7232b058c7e9f2e431f389c"
 
 PR = "r0"
 
-BPV = "12.4.1"
+BPV = "12.5.1"
 PV = "${BPV}"
-SRCREV = "1dc20627aa5d742376269dc5b4d5c67f34d08008"
+SRCREV = "cdbd244f7d1de53c7228f6758866c083ae71a3c3"
 
 S = "${WORKDIR}/git"
 
 SRC_URI = " \
-    git://github.com/opscode/chef.git;branch=12.4-stable;protocol=https \
+    git://github.com/chef/chef.git;branch=main;protocol=https \
     file://0001-chang-ksh-to-sh.patch \
     "
 
