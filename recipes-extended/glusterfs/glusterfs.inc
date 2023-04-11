@@ -20,6 +20,7 @@ SRC_URI += "file://glusterd.init \
             file://glusterd-change-port-range.patch \
             file://configure.ac-allow-PYTHON-values-to-be-passed-via-en.patch \
             file://0001-cli-duplicate-defns-of-cli_default_conn_timeout-and-.patch \
+            file://CVE-2023-26253.patch \
            "
 
 LICENSE = "(LGPL-3.0-or-later | GPL-2.0-only) & GPL-3.0-or-later & LGPL-3.0-or-later & GPL-2.0-or-later & LGPL-2.0-or-later & LGPL-2.1-or-later & Apache-2.0"
