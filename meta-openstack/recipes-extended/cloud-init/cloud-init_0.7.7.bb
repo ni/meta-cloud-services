@@ -11,8 +11,8 @@ SRC_URI = "https://launchpad.net/cloud-init/trunk/${PV}/+download/${BPN}-${PV}.t
            file://distros-add-windriver-skeleton-distro-file.patch \
            file://cloud.cfg"
 
-SRC_URI[md5sum] = "cd392e943dd0165e90a6d56afd0e4ad3"
-SRC_URI[sha256sum] = "9e8fd22eb7f6e40ae6a5f66173ddc3cc18f65ee406c460a728092b37db2f3ed7"
+SRC_URI[md5sum] = "7511a05ac2684465b42ba448e2bb5616"
+SRC_URI[sha256sum] = "d7b75e314ecdb99619014f21f3b622294a6c3bde248887dfb5e9cedb927ad0b0"
 
 S = "${WORKDIR}/${BPN}-${PV}"
 
@@ -49,5 +49,5 @@ INITSCRIPT_PACKAGES = "${PN}"
 INITSCRIPT_NAME_${BPN} = "cloud-init"
 
 RDEPENDS_${PN} = "sysklogd \
-                  python2 \
+                  python3 \
                  "
