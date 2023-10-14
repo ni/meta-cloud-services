@@ -16,6 +16,7 @@ FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
 SRC_URI = "\
 	http://arthurdejong.org/nss-pam-ldapd/${BPN}-${PV}.tar.gz \
+	file://0001-utils-Makefile.am-fix-shebang-for-chsh.py-and-getent.patch \
 	file://nslcd.init \
 	file://nslcd.service \
 	"
@@ -23,8 +24,8 @@ SRC_URI = "\
 inherit autotools features_check
 REQUIRED_DISTRO_FEATURES = "pam"
 
-SRC_URI[md5sum] = "8c99fdc54f4bf9aca8c5f53fdb1403ff"
-SRC_URI[sha256sum] = "ef7362e7f2003da8c7beb7bcc03c30494acf712625aaac8badc6e7eb16f3453f"
+SRC_URI[md5sum] = "cc30ee0ab91d6c94b7a343ae09b5dc69"
+SRC_URI[sha256sum] = "c6d661e74693cbf531a790631ca93b73f291fb23cc39465b09deb8da2bfb0e14"
 
 DEPENDS += "libpam openldap krb5"
 
