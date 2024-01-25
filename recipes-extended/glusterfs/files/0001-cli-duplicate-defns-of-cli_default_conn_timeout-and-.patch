@@ -72,11 +72,11 @@ Signed-off-by: Chen Qi <Qi.Chen@windriver.com>
  cli/src/cli.h | 4 ++--
  2 files changed, 5 insertions(+), 2 deletions(-)
 
-diff --git a/cli/src/cli.c b/cli/src/cli.c
-index cb425c84b..2c96b7ae6 100644
---- a/cli/src/cli.c
-+++ b/cli/src/cli.c
-@@ -84,6 +84,9 @@ rpc_clnt_prog_t *cli_rpc_prog;
+Index: glusterfs-11.1/cli/src/cli.c
+===================================================================
+--- glusterfs-11.1.orig/cli/src/cli.c
++++ glusterfs-11.1/cli/src/cli.c
+@@ -65,6 +65,9 @@
  
  extern struct rpc_clnt_program cli_prog;
  
@@ -86,21 +86,3 @@ index cb425c84b..2c96b7ae6 100644
  static int
  glusterfs_ctx_defaults_init(glusterfs_ctx_t *ctx)
  {
-diff --git a/cli/src/cli.h b/cli/src/cli.h
-index 81f75a0b4..cd4db3dac 100644
---- a/cli/src/cli.h
-+++ b/cli/src/cli.h
-@@ -40,8 +40,8 @@ enum argp_option_keys {
-     ARGP_PORT_KEY = 'p',
- };
- 
--int cli_default_conn_timeout;
--int cli_ten_minutes_timeout;
-+extern int cli_default_conn_timeout;
-+extern int cli_ten_minutes_timeout;
- 
- typedef enum {
-     COLD_BRICK_COUNT,
--- 
-2.21.0
-

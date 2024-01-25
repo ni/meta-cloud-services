@@ -24,19 +24,16 @@ Signed-off-by: Hongzhi.Song <hongzhi.song@windriver.com>
  extras/Makefile.am | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/extras/Makefile.am b/extras/Makefile.am
-index ff5ca9b..1f59746 100644
---- a/extras/Makefile.am
-+++ b/extras/Makefile.am
-@@ -10,7 +10,7 @@ endif
+Index: glusterfs-11.1/extras/Makefile.am
+===================================================================
+--- glusterfs-11.1.orig/extras/Makefile.am
++++ glusterfs-11.1/extras/Makefile.am
+@@ -10,7 +10,7 @@
  EditorModedir = $(docdir)
  EditorMode_DATA = glusterfs-mode.el glusterfs.vim
  
 -SUBDIRS = init.d systemd benchmarking hook-scripts $(OCF_SUBDIR) LinuxRPM \
 +SUBDIRS = benchmarking hook-scripts $(OCF_SUBDIR) LinuxRPM \
-           $(GEOREP_EXTRAS_SUBDIR) snap_scheduler firewalld cliutils python
+           $(GEOREP_EXTRAS_SUBDIR) snap_scheduler firewalld cliutils python \
+ 		  ganesha command-completion
  
- confdir = $(sysconfdir)/glusterfs
--- 
-2.8.1
-

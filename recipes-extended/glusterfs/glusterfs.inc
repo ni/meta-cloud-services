@@ -20,7 +20,7 @@ SRC_URI += "file://glusterd.init \
             file://glusterd-change-port-range.patch \
             file://configure.ac-allow-PYTHON-values-to-be-passed-via-en.patch \
             file://0001-cli-duplicate-defns-of-cli_default_conn_timeout-and-.patch \
-            file://CVE-2023-26253.patch \
+            file://0001-configure-pass-SSL_CERTS.-Don-t-discover-it.patch \
            "
 
 LICENSE = "(LGPL-3.0-or-later | GPL-2.0-only) & GPL-3.0-or-later & LGPL-3.0-or-later & GPL-2.0-or-later & LGPL-2.0-or-later & LGPL-2.1-or-later & Apache-2.0"
@@ -30,9 +30,10 @@ LIC_FILES_CHKSUM = "file://COPYING-GPLV2;md5=b234ee4d69f5fce4486a80fdaf4a4263 \
 
 inherit autotools pkgconfig setuptools3-base update-rc.d systemd
 inherit python3-dir
+inherit bash-completion
 
-DEPENDS += "bison-native flex-native python3-native fuse libaio libtirpc libxml2 ncurses \
-            openssl python3 readline zlib liburcu util-linux glib-2.0 acl"
+DEPENDS += "openssl-native bison-native flex-native python3-native fuse libaio libtirpc libxml2 ncurses \
+            openssl python3 readline zlib liburcu util-linux glib-2.0 acl ca-certificates ca-certificates-native liburing"
 
 # rpc now comes from libtirpc instead of glibc
 #
@@ -42,25 +43,29 @@ LDFLAGS += " -ltirpc"
 EXTRA_OECONF = "ac_cv_file__etc_debian_version=no \
                 ac_cv_file__etc_SuSE_release=no \
                 ac_cv_file__etc_redhat_release=no \
-				ac_cv_file__etc_centos_release=no \
+		ac_cv_file__etc_centos_release=no \
+                ac_cv_file__etc_os_release=no \
                 --with-mountutildir=${sbindir} \
                 --disable-fusermount \
                 TARGET_PYTHON=${bindir}/python3 \
                 PYTHON=${PYTHON} \
+		SSL_CERTS_DIR="${sysconfdir_native}/ssl/certs" \
                 BUILD_PYTHON_INC=${STAGING_INCDIR}/python${PYTHON_BASEVERSION} \
                 BUILD_PYTHON_LIB=python${PYTHON_BASEVERSION} \
                 BUILD_PYTHON_SITE_PACKAGES=${PYTHON_SITEPACKAGES_DIR} \
                "
 
-PACKAGECONFIG ??= "georeplication libibverbs"
-PACKAGECONFIG:remove:mipsarch = "libibverbs"
-PACKAGECONFIG:remove:arm = "libibverbs"
+PACKAGECONFIG ??= "georeplication"
 
 PACKAGECONFIG[debug] = "--enable-debug,--disable-debug,,"
 PACKAGECONFIG[georeplication] = "--enable-georeplication,--disable-georeplication,,rsync"
-PACKAGECONFIG[libibverbs] = "--enable-ibverbs,--disable-ibverbs,virtual/libibverbs librdmacm,"
+# PACKAGECONFIG[libibverbs] = "--enable-ibverbs,--disable-ibverbs,virtual/libibverbs librdmacm,"
 PACKAGECONFIG[ocf] = "--with-ocf,--without-ocf,,"
 PACKAGECONFIG[valgrind] = "--enable-valgrind,--disable-valgrind,valgrind,"
+PACKAGECONFIG[tcmalloc] = ",--without-tcmalloc,,"
+
+# TODO: packageconfig for:
+# --disable-linux-io_uring
 
 do_install:append() {
     install -d ${D}${sysconfdir}/init.d
@@ -141,7 +146,7 @@ FILES:${PN} = "${libdir}/glusterfs/${PV}/auth \
                ${libdir}/glusterfs/${PV}/xlator/protocol/client* \
                ${libdir}/glusterfs/${PV}/xlator/system \
                ${libdir}/glusterfs/${PV}/xlator/testing \
-			   ${libdir}/glusterfs/${PV}/xlator/playground \
+               ${libdir}/glusterfs/${PV}/xlator/playground \
                ${libdir}/glusterfs/${PV}/xlator/meta.so \
                ${libdir}/glusterfs/ganesha \
                ${libdir}/glusterfs/glusterfs/glusterfind \
@@ -154,7 +159,7 @@ FILES:${PN} = "${libdir}/glusterfs/${PV}/auth \
                ${libdir}/libgfdb.so.* \
                ${libdir}/libgfxdr.so.* \
                ${libdir}/python*/site-packages \
-			   ${libexecdir}/glusterfs/gfevents \
+	       ${libexecdir}/glusterfs/gfevents \
                ${libexecdir}/glusterfs/events \
                ${libexecdir}/glusterfs/glusterfind \
                ${libexecdir}/glusterfs/gfind_missing_files \
@@ -164,7 +169,10 @@ FILES:${PN} = "${libdir}/glusterfs/${PV}/auth \
                ${libexecdir}/glusterfs/peer_mountbroker \
                ${libexecdir}/glusterfs/peer_gsec_create \
                ${libexecdir}/glusterfs/gverify.sh \
+	       ${libexecdir}/glusterfs/glfsheal \
+	       ${libexecdir}/glusterfs/scripts/ \
                ${libexecdir}/glusterfs/peer_add_secret_pub \
+	       ${libexecdir}/ganesha/ \
                ${localstatedir} \
                ${sysconfdir}/default/volatiles \
                ${sbindir}/glusterfs \
@@ -176,7 +184,7 @@ FILES:${PN} = "${libdir}/glusterfs/${PV}/auth \
                ${sbindir}/glustereventsd \
                ${sbindir}/gf_attach \
                ${sbindir}/*.py \
-			   ${sbindir}/gluster-setgfid2path \
+               ${sbindir}/gluster-setgfid2path \
                ${bindir}/ \
                ${sysconfdir}/glusterfs \
                ${sysconfdir}/ganesha \
@@ -200,6 +208,7 @@ FILES:${PN}-server = "${libdir}/glusterfs/${PV}/xlator/mgmt \
                       ${libdir}/glusterfs/${PV}/xlator/nfs \
                       ${libdir}/glusterfs/${PV}/xlator/protocol/server* \
                       ${libdir}/glusterfs/${PV}/xlator/storage \
+		      ${libdir}/glusterfs/${PV}/cloudsync-plugins/ \
                       ${sbindir}/gluster \
                       ${sbindir}/glusterd \
                       ${sysconfdir}/glusterfs/glusterd.vol \

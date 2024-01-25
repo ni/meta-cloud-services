@@ -1,0 +1,30 @@
+From 526b64958b8aabcbad48ffb61f6855b374a68da6 Mon Sep 17 00:00:00 2001
+From: Bruce Ashfield <bruce.ashfield@gmail.com>
+Date: Thu, 25 Jan 2024 18:08:01 +0000
+Subject: [PATCH] configure: pass SSL_CERTS. Don't discover it
+
+Executing the ssl binary to locate the certificates doesn't work
+in our environment. Pass it to the build instead.
+
+Upstream-Status: Inappropriate [embedded specific]
+
+Signed-off-by: Bruce Ashfield <bruce.ashfield@gmail.com>
+---
+ configure.ac | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/configure.ac b/configure.ac
+index 1cda220..fe14134 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -814,6 +814,7 @@ AS_IF([test "x$enable_fuse_notifications" != "xno"], [
+ dnl Find out OpenSSL trusted certificates path
+ AC_MSG_CHECKING([for OpenSSL trusted certificates path])
+ SSL_CERT_PATH=$(openssl version -d | sed -e 's|OPENSSLDIR: "\(.*\)".*|\1|')
++SSL_CERT_PATH="${SSL_CERTS_DIR}"
+ if test -d "${SSL_CERT_PATH}" 1>/dev/null 2>&1; then
+    AC_MSG_RESULT([$SSL_CERT_PATH])
+    AC_DEFINE_UNQUOTED(SSL_CERT_PATH, ["$SSL_CERT_PATH"], [Path to OpenSSL trusted certificates.])
+-- 
+2.39.2
+
