@@ -2,6 +2,8 @@ DESCRIPTION = "Plugin for setuptools that enables git integration"
 HOMEPAGE = "https://github.com/wichert/setuptools-git"
 SECTION = "devel/python"
 LICENSE = "BSD"
+# Bare "BSD" needs an explicit NO_GENERIC_LICENSE mapping for license-format QA.
+NO_GENERIC_LICENSE[BSD] = "LICENSE.txt"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=3775480a712fc46a69647678acb234cb"
 
 SRC_URI[md5sum] = "40b2ef7687a384ea144503c2e5bc67e2"

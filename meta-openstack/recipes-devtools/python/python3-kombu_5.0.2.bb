@@ -2,6 +2,8 @@ DESCRIPTION = "A messaging framework for Python"
 HOMEPAGE = "http://kombu.readthedocs.org"
 SECTION = "devel/python"
 LICENSE = "BSD"
+# Bare "BSD" needs an explicit NO_GENERIC_LICENSE mapping for license-format QA.
+NO_GENERIC_LICENSE[BSD] = "LICENSE"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=daea7c168428449fbee05e644df929f4"
 
 SRC_URI[md5sum] = "52192e631ac39a443fb1abeb52299f22"

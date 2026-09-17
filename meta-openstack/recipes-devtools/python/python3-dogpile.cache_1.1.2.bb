@@ -2,6 +2,8 @@ DESCRIPTION = "Python Dogpile Cache: A caching front-end based on the Dogpile lo
 HOMEPAGE = "https://pypi.python.org/pypi/dogpile.cache"
 SECTION = "devel/python"
 LICENSE = "BSD"
+# Bare "BSD" needs an explicit NO_GENERIC_LICENSE mapping for license-format QA.
+NO_GENERIC_LICENSE[BSD] = "LICENSE"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=6d830a549d9d8c25362346e0f8fbba53"
 
 SRC_URI[md5sum] = "fb9bea726156560d03890599c4cd92e0"

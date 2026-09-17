@@ -2,6 +2,8 @@ DESCRIPTION = "testscenarios: a pyunit extension for dependency injection"
 HOMEPAGE = "https://pypi.python.org/pypi/testscenarios"
 SECTION = "devel/python"
 LICENSE = "BSD"
+# Bare "BSD" needs an explicit NO_GENERIC_LICENSE mapping for license-format QA.
+NO_GENERIC_LICENSE[BSD] = "BSD"
 LIC_FILES_CHKSUM = "file://BSD;md5=0805e4f024d089a52dca0671a65b8b66"
 
 SRC_URI[md5sum] = "859073d9e7b049aee2e6704c51f6001a"

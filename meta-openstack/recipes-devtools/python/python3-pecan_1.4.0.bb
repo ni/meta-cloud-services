@@ -2,6 +2,8 @@ DESCRIPTION = "WSGI object-dispatching web framework"
 HOMEPAGE = "https://pypi.python.org/pypi/pecan/"
 SECTION = "devel/python"
 LICENSE = "BSD"
+# Bare "BSD" needs an explicit NO_GENERIC_LICENSE mapping for license-format QA.
+NO_GENERIC_LICENSE[BSD] = "LICENSE"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=d846877d24bbb3d7a00a985c90378e8c"
 
 SRC_URI[md5sum] = "70667908b648043bc8a3fcb7d1e4d53a"

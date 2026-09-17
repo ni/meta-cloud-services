@@ -1,6 +1,7 @@
 DESCRIPTION = "Open-iSCSI project is a high performance, transport independent, multi-platform implementation of RFC3720."
 HOMEPAGE = "http://www.open-iscsi.org/"
-LICENSE = "GPL"
+# Legacy bare "GPL" is rejected by newer license-format QA; GPLv2 confirmed via upstream COPYING.
+LICENSE = "GPL-2.0-only"
 MACHINE_KERNEL_PR:append = "a"
 PR = "r2"
 

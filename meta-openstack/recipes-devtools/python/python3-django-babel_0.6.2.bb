@@ -2,6 +2,8 @@ DESCRIPTION = "Tools for using Babel with Django"
 HOMEPAGE = "https://github.com/python-babel/django-babel"
 SECTION = "devel/python"
 LICENSE = "BSD"
+# Bare "BSD" needs an explicit NO_GENERIC_LICENSE mapping for license-format QA.
+NO_GENERIC_LICENSE[BSD] = "COPYING"
 LIC_FILES_CHKSUM = "file://COPYING;md5=5ae97ab65116b8d7890c59de57577b46"
 
 inherit setuptools3 pypi

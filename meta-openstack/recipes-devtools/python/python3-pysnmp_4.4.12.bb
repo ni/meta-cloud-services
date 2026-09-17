@@ -2,6 +2,8 @@ DESCRIPTION = "A pure-Python SNMPv1/v2c/v3 library"
 HOMEPAGE = "https://pypi.python.org/pypi/pysnmp"
 SECTION = "devel/python"
 LICENSE = "BSD"
+# Bare "BSD" needs an explicit NO_GENERIC_LICENSE mapping for license-format QA.
+NO_GENERIC_LICENSE[BSD] = "LICENSE.rst"
 LIC_FILES_CHKSUM = "file://LICENSE.rst;md5=b15d29f500f748d1c2a15709769090a8"
 
 SRC_URI[md5sum] = "2222880259daf6e2cb322e938c818276"
