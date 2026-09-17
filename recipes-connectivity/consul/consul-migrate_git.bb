@@ -1,6 +1,7 @@
 SUMMARY = "Provides data migration for Consul server nodes"
 HOMEPAGE = "https://github.com/hashicorp/consul-migrate"
-LICENSE = "MIT AND MPL-2.0 AND LicenseRef-BSD"
+# wrynose's oe-core license-format QA doesn't understand SPDX AND yet; use &.
+LICENSE = "MIT & MPL-2.0 & LicenseRef-BSD"
 LIC_FILES_CHKSUM = "file://src/github.com/hashicorp/consul-migrate/LICENSE;md5=b278a92d2c1509760384428817710378"
 
 # The vendored code aggregates BSD-flavoured content that OE-core's

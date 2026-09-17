@@ -1,6 +1,7 @@
 DESCRIPTION = "A tool for discovering and configuring services in your infrastructure"
 HOMEPAGE = "https://www.consul.io/"
-LICENSE = "Apache-2.0 AND BSD-2-Clause AND MIT AND MPL-2.0 AND LicenseRef-BSD"
+# wrynose's oe-core license-format QA doesn't understand SPDX AND yet; use &.
+LICENSE = "Apache-2.0 & BSD-2-Clause & MIT & MPL-2.0 & LicenseRef-BSD"
 LIC_FILES_CHKSUM = "file://src/github.com/hashicorp/consul/LICENSE;md5=b278a92d2c1509760384428817710378"
 
 # The vendored code aggregates BSD-flavoured content that OE-core's
